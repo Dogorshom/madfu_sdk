@@ -33,16 +33,24 @@ dependencies:
 
 - **`apiKey`**: 
   - Type: `String`
-  - Description: The API Key provided by Madfu.
+  - Description: The API Key provided by Madfu Integration Team.
 
 - **`appCode`**: 
   - Type: `String`
-  - Description: The App Code provided by Madfu.
+  - Description: The App Code provided by Madfu Integration Team.
 
 - **`authorization`**: 
   - Type: `String`
-  - Description: The Authorization token provided by Madfu.
+  - Description: The Authorization token provided by Madfu Integration Team.
 
+- **`merchantUsername`**: 
+  - Type: `String`
+  - Description: Merchant username that must be provided by Madfu Integration Team.
+
+- **`merchantPassword`**: 
+  - Type: `String`
+  - Description: Merchant password that provided by Madfu Integration Team.
+  
 ### Optional Parameters
 
 - **`madfuEnvironment`**: 
