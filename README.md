@@ -29,57 +29,22 @@ dependencies:
 
 ### Required Parameters
 
-- **`madfuOrderModel`**: 
-  - Type: `MadfuOrderModel`
-  - Description: The order model that contains all the necessary data for the payment process.
-
-- **`apiKey`**: 
-  - Type: `String`
-  - Description: The API Key provided by Madfu Integration Team.
-
-- **`appCode`**: 
-  - Type: `String`
-  - Description: The App Code provided by Madfu Integration Team.
-
-- **`authorization`**: 
-  - Type: `String`
-  - Description: The Authorization token provided by Madfu Integration Team.
-
-- **`merchantUsername`**: 
-  - Type: `String`
-  - Description: Merchant username that must be provided by Madfu Integration Team.
-
-- **`merchantPassword`**: 
-  - Type: `String`
-  - Description: Merchant password that provided by Madfu Integration Team.
+- **madfuOrderModel (MadfuOrderModel)**: The order model that contains all the necessary data for the payment process.
+- **apiKey (string)**: The API Key provided by the Madfu Integration Team.
+- **appCode (string)**: The App Code provided by the Madfu Integration Team.
+- **authorization (string)**: The Authorization token provided by the Madfu Integration Team.
+- **merchantUsername (string)**: Merchant username provided by the Madfu Integration Team.
+- **merchantPassword (string)**: Merchant password provided by the Madfu Integration Team.
 
 ### Optional Parameters
 
-- **`madfuEnvironment`**: 
-  - Type: `MadfuEnvironment`
-  - Default: `MadfuEnvironment.live`
-  - Description: The environment to use for the payment process.
+- **madfuEnvironment (MadfuEnvironment)**: The environment to use for the payment process. Default is `MadfuEnvironment.live`.
+- **isDarkMode (bool)**: The theme mode for the landing page of the payment process. Default is `false`.
+- **onPaymentSuccess (Function()?)**: The function to be called when the payment is successful.
+- **onPaymentFailure (Function()?)**: The function to be called when the payment fails.
+- **onPaymentCancel (Function()?)**: The function to be called when the payment is cancelled.
+- **onPaymentError (Function()?)**: The function to be called when there is an error during the payment process.
 
-- **`isDarkMode`**: 
-  - Type: `bool`
-  - Default: `false`
-  - Description: The theme mode for the landing page of the payment process.
-
-- **`onPaymentSuccess`**: 
-  - Type: `Function()?`
-  - Description: The function to be called when the payment is successful.
-
-- **`onPaymentFailure`**: 
-  - Type: `Function()?`
-  - Description: The function to be called when the payment fails.
-
-- **`onPaymentCancel`**: 
-  - Type: `Function()?`
-  - Description: The function to be called when the payment is cancelled.
-
-- **`onPaymentError`**: 
-  - Type: `Function()?`
-  - Description: The function to be called when there is an error during the payment process.
 
 ## Usage
 
@@ -185,81 +150,40 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 ### Madfu Order Model Parameters
 
-### Order Details
+#### Order Details
 
 The order details are encapsulated in the `MadfuOrderData` object, which contains the following required fields:
 
-- **`taxes`**: 
-  - Type: `double`
-  - Description: The taxes amount. (required)
+- **taxes (double)**: The taxes amount. (required)
+- **actualValue (double)**: The actual value of the order. (required)
+- **amount (double)**: The total amount of the order. (required)
+- **merchantReference (String)**: The merchant reference for the order (Order ID from your system). (required)
 
-- **`actualValue`**: 
-  - Type: `double`
-  - Description: The actual value of the order. (required)
-
-- **`amount`**: 
-  - Type: `double`
-  - Description: The total amount of the order. (required)
-
-- **`merchantReference`**: 
-  - Type: `String`
-  - Description: The merchant reference for the order (Order ID from your system). (required)
-
-### Guest Order Data
+#### Guest Order Data
 
 The guest order data is encapsulated in the `GuestOrderData` object, which contains the following fields:
 
-- **`customerMobile`**: 
-  - Type: `String`
-  - Description: The customer mobile number. (required)
+- **customerMobile (String)**: The customer mobile number. (required)
+- **customerName (String)**: The customer name. (Optional)
+- **lang (String)**: The language of the customer. (required)
 
-- **`customerName`**: 
-  - Type: `String`
-  - Description: The customer name. (Optional)
-
-- **`lang`**: 
-  - Type: `String`
-  - Description: The language of the customer. (required)
-
-### Merchant URLs
+#### Merchant URLs
 
 The merchant URLs are encapsulated in the `MerchantUrls` object, which contains the following required fields:
 
-- **`success`**: 
-  - Type: `String`
-  - Description: The success URL. (required)
+- **success (String)**: The success URL. (required)
+- **failure (String)**: The failure URL. (required)
+- **cancel (String)**: The cancel URL. (required)
 
-- **`failure`**: 
-  - Type: `String`
-  - Description: The failure URL. (required)
-
-- **`cancel`**: 
-  - Type: `String`
-  - Description: The cancel URL. (required)
-
-### Order Details List
+#### Order Details List
 
 The `orderDetails` is a list of `OrderDetails` objects that contains the product details. At least one `OrderDetails` object is required. Each `OrderDetails` object contains the following fields:
 
-- **`productName`**: 
-  - Type: `String`
-  - Description: The product name.
-
-- **`sku`**: 
-  - Type: `String`
-  - Description: The product SKU.
-
-- **`productImage`**: 
-  - Type: `String`
-  - Description: The product image URL.
-
-- **`count`**: 
-  - Type: `int`
-  - Description: The product count.
-
-- **`totalAmount`**: 
-  - Type: `double`
-  - Description: The total amount of the product.
+- **productName (String)**: The product name.
+- **sku (String)**: The product SKU.
+- **productImage (String)**: The product image URL.
+- **count (int)**: The product count.
+- **totalAmount (double)**: The total amount of the product.
 
 ### Support
 
