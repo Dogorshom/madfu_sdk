@@ -2,6 +2,8 @@
 
 Madfu SDK allows you to easily integrate the Madfu payment gateway into your Flutter applications.
 
+![alt text](https://i.ibb.co/2n3dsrM/Madfu-Link-Flutter.png)
+
 ### Platform Compatibility
 
 The Madfu SDK supports the following platforms:
@@ -50,7 +52,7 @@ dependencies:
 - **`merchantPassword`**: 
   - Type: `String`
   - Description: Merchant password that provided by Madfu Integration Team.
-  
+
 ### Optional Parameters
 
 - **`madfuEnvironment`**: 
