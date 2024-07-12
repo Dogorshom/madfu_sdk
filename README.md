@@ -102,6 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       appCode: "your_app_code",
                       apiKey: "your_api_key",
                       authorization: "your_authorization",
+                      merchantUsername: "your_merchant_username",
+                      merchantPassword: "your_merchant_password",
                       madfuEnvironment: MadfuEnvironment.test,
                       madfuOrderModel: MadfuOrderModel(
                           order: MadfuOrderData(
