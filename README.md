@@ -43,7 +43,7 @@ dependencies:
 - **onPaymentSuccess (Function()?)**: The function to be called when the payment is successful.
 - **onPaymentFailure (Function()?)**: The function to be called when the payment fails.
 - **onPaymentCancel (Function()?)**: The function to be called when the payment is cancelled.
-- **onPaymentError (Function()?)**: The function to be called when there is an error during the payment process.
+- **onPaymentError (Function(String? message)?)**: The function to be called when there is an error during the payment process, will provide error message from API.
 
 
 ## Usage
@@ -194,6 +194,10 @@ If you encounter any issues or have questions, please contact our support team a
 ### Contributions
 
 Contributions to the SDK are welcome! You can open an issue or submit a pull request on GitHub if you have any improvements or bug fixes.
+
+### Contributors
+
+[Abdelsalam Dogorshom](https://github.com/dogorshom)
 
 ---
 
